@@ -25,7 +25,7 @@
 
 int main(){
 
-	printf("\nA Char is %zu bytes", sizeof( char ));
+    printf("\nA Char is %zu bytes", sizeof( char ));
     printf("\nAn int is %zu bytes", sizeof( int ));
     printf("\nA short is %zu bytes", sizeof( short ));
     printf("\nA long is %zu bytes", sizeof( long ));
@@ -39,7 +39,7 @@ int main(){
     printf("\nA double is %zu bytes\n", sizeof( double ));
     printf("\nA long double is %zu bytes\n\n", sizeof( long double ));
 
-	return 0;
+   return 0;
 }
 
 
