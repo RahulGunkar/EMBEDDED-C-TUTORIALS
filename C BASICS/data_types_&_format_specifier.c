@@ -29,15 +29,27 @@ int main(){
     printf("\nAn int is %zu bytes", sizeof( int ));
     printf("\nA short is %zu bytes", sizeof( short ));
     printf("\nA long is %zu bytes", sizeof( long ));
+    printf("\nfloat is %zu bytes", sizeof( float ));
+    printf("\nA double is %zu bytes\n", sizeof( double ));
+    printf("\nA long double is %zu bytes\n\n", sizeof( long double ));
+
+
+
     printf("\nA long long is %zu bytes\n", sizeof( long long ));
     printf("\nAn unsigned Char is %zu bytes", sizeof( unsigned char ));
     printf("\nAn unsigned int is %zu bytes", sizeof( unsigned int));
     printf("\nAn unsigned short is %zu bytes", sizeof( unsigned short ));
     printf("\nAn unsigned long is %zu bytes", sizeof( unsigned long ));
-    printf("\nAn unsigned long long is %zu bytes\n",sizeof( unsigned long long ));
-    printf("\nfloat is %zu bytes", sizeof( float ));
-    printf("\nA double is %zu bytes\n", sizeof( double ));
-    printf("\nA long double is %zu bytes\n\n", sizeof( long double ));
+	printf("\nAn unsigned long long is %zu bytes\n",sizeof( unsigned long long ));
+	
+
+    printf("\nAn signed Char is %zu bytes", sizeof( signed char ));
+    printf("\nAn signed int is %zu bytes", sizeof( signed int));
+    printf("\nAn signed short is %zu bytes", sizeof( signed short ));
+    printf("\nAn signed long is %zu bytes", sizeof( signed long ));
+    printf("\nAn signed long long is %zu bytes\n",sizeof( signed long long ));
+
+ 
 
 	return 0;
 }
