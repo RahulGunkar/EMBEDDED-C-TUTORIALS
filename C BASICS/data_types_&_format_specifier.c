@@ -13,23 +13,40 @@
 	signed char                 1          -128 to 127                             %c 
 	unsigned char               1           0 to 255                               %c
 	float                       4                                                  %f
-	double                      8                                                  %lf
+	double                      8                                                  %lf or %e or %E
 	long double                 12                                                 %Lf
 	char						1												   %c
+
+	
+	Unsigned Octal number for integer : %o
+	Unsigned Hexadecimal for integer : %x, %X
+
 */
 
 #include <stdio.h>	//header file which contains scanf and printf functions
 
-
+#include <stdbool.h>	//only for using bool datatype
 
 
 int main(){
 
+	/*
+		basic data types are int,char,float,double,long,bool
+	*/
+	int a = 10;
+	char b = 'a';
+	float c = 5.1;
+
+	bool d = true; //can take only false or true value..1 byte
+
+
+
+	//printing the size of different data types
     printf("\nA Char is %zu bytes", sizeof( char ));
     printf("\nAn int is %zu bytes", sizeof( int ));
     printf("\nA short is %zu bytes", sizeof( short ));
     printf("\nA long is %zu bytes", sizeof( long ));
-    printf("\nfloat is %zu bytes", sizeof( float ));
+    printf("\nA float is %zu bytes", sizeof( float ));
     printf("\nA double is %zu bytes\n", sizeof( double ));
     printf("\nA long double is %zu bytes\n\n", sizeof( long double ));
 
@@ -43,11 +60,13 @@ int main(){
 	printf("\nAn unsigned long long is %zu bytes\n",sizeof( unsigned long long ));
 	
 
-    printf("\nAn signed Char is %zu bytes", sizeof( signed char ));
-    printf("\nAn signed int is %zu bytes", sizeof( signed int));
-    printf("\nAn signed short is %zu bytes", sizeof( signed short ));
-    printf("\nAn signed long is %zu bytes", sizeof( signed long ));
-    printf("\nAn signed long long is %zu bytes\n",sizeof( signed long long ));
+    printf("\nA signed Char is %zu bytes", sizeof( signed char ));
+    printf("\nA signed int is %zu bytes", sizeof( signed int));
+    printf("\nA signed short is %zu bytes", sizeof( signed short ));
+    printf("\nA signed long is %zu bytes", sizeof( signed long ));
+    printf("\nA signed long long is %zu bytes\n",sizeof( signed long long ));
+
+    printf("\nA bool is %zu bytes\n",sizeof(bool));
 
  
 
@@ -56,20 +75,22 @@ int main(){
 
 
 
-/*IMPORTANT NOTE
+/*
+
+	IMPORTANT NOTE
 
 
-sizeof returns size_t you need to use %zu for the format string instead\
-of %d. The type of unsigned integer of size_t can vary (depending on \
-platform) and may not be long unsigned int everywhere, which is covered\
-in the draft C99 standard section 6.5.3.4 The sizeof operator paragraph 4:
-The value of the result is implementation-defined, and its type (an unsigned\
-integer type) is size_t, defined in (and other headers).
-Also note that using the wrong format specifier for printf is undefined behavior,\
-which is covered in section 7.19.6.1 The fprintf function, which also covers printf \
-with respect to format specifiers says:
-If a conversion specification is invalid, the behavior is undefined.248)\
-If any argument is not the correct type for the corresponding conversion specification, \
-the behavior is undefined.
+	sizeof returns size_t you need to use %zu for the format string instead\
+	of %d. The type of unsigned integer of size_t can vary (depending on \
+	platform) and may not be long unsigned int everywhere, which is covered\
+	in the draft C99 standard section 6.5.3.4 The sizeof operator paragraph 4:
+	The value of the result is implementation-defined, and its type (an unsigned\
+	integer type) is size_t, defined in (and other headers).
+	Also note that using the wrong format specifier for printf is undefined behavior,\
+	which is covered in section 7.19.6.1 The fprintf function, which also covers printf \
+	with respect to format specifiers says:
+	If a conversion specification is invalid, the behavior is undefined.248)\
+	If any argument is not the correct type for the corresponding conversion specification, \
+	the behavior is undefined.
 
 */
