@@ -11,7 +11,7 @@ struct ADAS{
 
 void printDetails(struct ADAS obj);
 void displayStruct(struct ADAS *objPtr);
-
+struct ADAS returnStruct(struct ADAS o);
 
 
 /*
@@ -63,7 +63,9 @@ int main(){
     /*passing a reference to the structures in the functions */
     displayStruct(&object);
 
-
+    /*function returning whole structure*/
+    struct ADAS holdVar = returnStruct(object);
+    printf("\n%d\n%s", holdVar.strength, holdVar.currentModule);
 
 	return 0;
 }
@@ -79,5 +81,11 @@ void displayStruct(struct ADAS *objPtr){
     objPtr->strength = 1000;
     strcpy(objPtr->currentModule,"Naruto");
     printf("\n%d\n%s", objPtr->strength, objPtr->currentModule);
+}
+
+struct ADAS returnStruct(struct ADAS o){
+    o.strength = 300;
+    strcpy(o.currentModule,"Dance");
+    return o;
 }
 
