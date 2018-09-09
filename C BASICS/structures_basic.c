@@ -41,31 +41,31 @@ int main(){
 	ptr = &object;
 	ptr->strength = 40;
 	strcpy(ptr->currentModule,"Web Development");
-    printf("\n%d\n%s", ptr->strength, ptr->currentModule);
+	printf("\n%d\n%s", ptr->strength, ptr->currentModule);
 
 
-    //create array of structure variable
-    struct ADAS arr[2];
-    ptr = arr;
+	//create array of structure variable
+	struct ADAS arr[2];
+	ptr = arr;
 
-    ptr[0].strength = 98;
-    strcpy(ptr[0].currentModule , "Martial Arts");
+	ptr[0].strength = 98;
+	strcpy(ptr[0].currentModule , "Martial Arts");
 
-    ptr[1].strength = 200;
-    strcpy(ptr[1].currentModule , "Assasination");
+	ptr[1].strength = 200;
+	strcpy(ptr[1].currentModule , "Assasination");
 
-    printf("\n%d\n%s", ptr[0].strength, ptr[0].currentModule);
-    printf("\n%d\n%s", ptr[1].strength, ptr[1].currentModule);
+	printf("\n%d\n%s", ptr[0].strength, ptr[0].currentModule);
+	printf("\n%d\n%s", ptr[1].strength, ptr[1].currentModule);
 
-    /*passing structures variables to functions */
-    printDetails(object);
+	/*passing structures variables to functions */
+	printDetails(object);
 
-    /*passing a reference to the structures in the functions */
-    displayStruct(&object);
+	/*passing a reference to the structures in the functions */
+	displayStruct(&object);
 
-    /*function returning whole structure*/
-    struct ADAS holdVar = returnStruct(object);
-    printf("\n%d\n%s", holdVar.strength, holdVar.currentModule);
+	/*function returning whole structure*/
+	struct ADAS holdVar = returnStruct(object);
+	printf("\n%d\n%s", holdVar.strength, holdVar.currentModule);
 
 	return 0;
 }
