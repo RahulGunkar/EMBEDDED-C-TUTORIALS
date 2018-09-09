@@ -1,47 +1,43 @@
 /* This code contains all the functions that can be performed on arrays..like insert,delete,searching
 	It also contains code for operations on 2D arrays.
-	User must first initialize the array and then pass those arrays to the functiosn defined here 
+	User must first initialize the array and then pass those arrays to the functiosn defined here
 	for the operations.
 */
 
 #include <stdio.h>
 #include <stdlib.h>
 
-#define ARRAY_SIZE	10
+#define ARRAY_SIZE	5
 
-void storeChar(char arr[ARRAY_SIZE]);
-void printArray(char arr[ARRAY_SIZE]);
+void printArray(int arr[ARRAY_SIZE]);   //function prototype..i.e declaration
+
 
 int main(){
 
-	//defining a 1D array of char datatype..it can be later converted to any other data type
-	char bufferData[ARRAY_SIZE];
+	//defining 1D array of size 10
+	int arr[ARRAY_SIZE] = { 4,2,7,3,8 } ;
 
-	storeChar(bufferData);
-	printArray(bufferData,"int");
+	printArray(arr);
 
-	
-	
+    //accessing an individual element
+    printf("Element at index 2 is :%d",arr[2]); //prints 7 on index 2
+
+    //modifying a particular element
+    arr[2] = 100;
+    printArray(arr); // 7 is replaced by 100
+
 
 	return 0;
 }
 
 
-void storeChar(char arr[ARRAY_SIZE]){
-	int i=0;
-	for( i=0 ; i<ARRAY_SIZE ; i++){
-		scanf("%c",&arr[i]);
-	}
-}
 
-void storeInt
-void printArray(char arr[ARRAY_SIZE]){
+
+void printArray(int arr[ARRAY_SIZE]){
 	int i=0;
 	for( i=0 ; i<ARRAY_SIZE ; i++){
-		if(type == "int"){
-			printf("%c\t\n",arr[i] );	/*since Ascii value of 1 is 49..so -48 will convert char in integer*/
-	
-		}
+
+			printf("\n%d\t\n",arr[i] );
 		}
 
 }
