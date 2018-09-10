@@ -50,7 +50,42 @@ int main()
           printf("%d %d ", arr2[i][j], *(*(arr2 + i) + j));
         printf("\n");
       }
+      /*
+      		*(*(*(arr + i ) + j ) + k) is equivalent to the subscript expression arr[i][j][k]
 
+      		We know the expression *(arr + i) is equivalent to arr[i] and the expression *(*(arr + i) + j)
+      		is equivalent arr[i][j]. So we can say that arr[i]
+      		represents the base address of ith 2-D array and arr[i][j] represents the
+      		base address of the jth 1-D array.
+      */
+
+      int arr3[2][3][2] = {
+                       {
+                         {5, 10},
+                         {6, 11},
+                         {7, 12},
+                       },
+                       {
+                         {20, 30},
+                         {21, 31},
+                         {22, 32},
+                       }
+                     };
+	  int i1, j1, k1;
+	  for (i1 = 0; i1 < 2; i1++)
+	  {
+	    for (j1 = 0; j1 < 3; j1++)
+	    {
+	       for (k1 = 0; k1 < 2; k1++)
+	         printf("%d\t", *(*(*(arr3 + i1) + j1) +k1));
+	       printf("\n");
+	    }
+	  }
+
+
+	  /*
+	  	https://www.geeksforgeeks.org/pointer-array-array-pointer/
+	  */
 
     return 0;
 }
