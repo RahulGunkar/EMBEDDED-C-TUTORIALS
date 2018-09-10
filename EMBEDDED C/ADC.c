@@ -4,7 +4,7 @@
 
 */
 
-void initializeADC()
+void initializeADC()  //call it only once
 {
   DDRC|=(1<<PC0);
   DDRC|=(1<<PC1);
@@ -13,7 +13,7 @@ void initializeADC()
   ADMUX&=~(1<<MUX0);
 }
 
-float returnAdcValue()
+float returnAdcValue()    //This function reads the value of input signal present on pin A0 and returns the digital value of it
 {
   ADCSRA|=(1<<ADSC);
   while(ADSC==1);
